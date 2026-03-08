@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+# GitHub Configuration
+github:
+  token: ${GITHUB_TOKEN:your-github-token}
+  webhook-secret: ${GITHUB_WEBHOOK_SECRET:}
+
+# Azure OpenAI Configuration
+azure:
+  openai:
+    api-key: ${AZURE_OPENAI_API_KEY:your-azure-key}
+    endpoint: ${AZURE_OPENAI_ENDPOINT:https://your-resource.openai.azure.com/}
+    deployment-name: ${AZURE_DEPLOYMENT_NAME:gpt-4o-mini}
+    api-version: ${AZURE_API_VERSION:2024-02-01}
+
+# Logging
+logging:
+  level:
+    com.reviewer: DEBUG
+    org.springframework.web.reactive: WARN
